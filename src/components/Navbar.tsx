@@ -2,7 +2,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, Menu } from 'lucide-react';
 import logoDark from '@/media/LOGO TIVISOFT FONDO OSCURO.png';
-import logoLight from '@/media/LOGO TIVISOFT.png';
 
 export function Navbar() {
   return (
@@ -22,14 +21,14 @@ export function Navbar() {
         </div>
 
         <div className="flex items-center justify-center lg:hidden">
-          <Link href="/" className="flex h-11 w-11 items-center justify-center overflow-hidden rounded-2xl border border-emerald-400/30 bg-gradient-to-r from-emerald-500/20 to-blue-500/20 shadow-[0_0_18px_rgba(16,185,129,0.2)] p-1.5">
+          <Link href="/" className="flex h-11 items-center justify-center overflow-hidden rounded-full border border-emerald-400/30 bg-gradient-to-r from-emerald-500/10 to-blue-500/10 px-3 shadow-[0_0_18px_rgba(16,185,129,0.2)]">
             <Image
               src={logoDark}
-              alt="Tivisoft icon"
-              width={40}
-              height={40}
+              alt="Tivisoft logo"
+              width={120}
+              height={28}
               priority
-              className="h-full w-full rounded-xl object-contain"
+              className="h-6 w-auto object-contain"
             />
           </Link>
         </div>
