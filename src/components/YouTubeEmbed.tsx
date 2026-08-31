@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Play } from 'lucide-react';
+import { ExternalLink, Play } from 'lucide-react';
 
 type Props = {
   videoId: string;
@@ -20,18 +20,31 @@ export default function YouTubeEmbed({
   aspectClassName = 'aspect-video',
 }: Props) {
   const [active, setActive] = useState(false);
+  const watchUrl = `https://www.youtube.com/watch?v=${videoId}`;
 
   return (
     <div className={`relative w-full overflow-hidden bg-slate-900 ${aspectClassName}`}>
       {active ? (
-        <iframe
-          className="absolute inset-0 h-full w-full"
-          src={`https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0`}
-          title={title}
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerPolicy="strict-origin-when-cross-origin"
-          allowFullScreen
-        />
+        <>
+          <iframe
+            className="absolute inset-0 h-full w-full"
+            src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`}
+            title={title}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          />
+          {/* Escape hatch for videos whose owner disabled embedding. */}
+          <a
+            href={watchUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="absolute bottom-3 right-3 z-10 inline-flex items-center gap-1.5 rounded-full bg-slate-950/70 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur transition hover:bg-slate-950"
+          >
+            <ExternalLink className="h-3.5 w-3.5" />
+            Ver en YouTube
+          </a>
+        </>
       ) : (
         <button
           type="button"
@@ -44,6 +57,9 @@ export default function YouTubeEmbed({
             src={`https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg`}
             alt=""
             loading="lazy"
+            onError={(event) => {
+              event.currentTarget.src = `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
+            }}
             className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
           />
           <span className="absolute inset-0 bg-slate-950/25 transition group-hover:bg-slate-950/10" />

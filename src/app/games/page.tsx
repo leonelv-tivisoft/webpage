@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, Film, ImageIcon, Play, Smartphone, Sparkles, MessageCircle } from 'lucide-react';
+import { ArrowRight, BookOpen, Film, Gamepad2, ImageIcon, Play, Smartphone, Sparkles, MessageCircle } from 'lucide-react';
 import logoLight from '@/media/LOGO TIVISOFT.png';
 import pedaleandoLogo from '@/media/Pedaleando_logo.png';
 import GameGallery, { type GalleryItem } from '@/components/GameGallery';
@@ -56,6 +56,7 @@ export default function GamesPage() {
           <div className="hidden items-center gap-8 text-sm font-medium text-slate-700 lg:flex">
             <Link href="/" className="transition hover:text-emerald-600">Inicio</Link>
             <Link href="/games" className="transition hover:text-emerald-600">Games</Link>
+            <a href="#historia" className="transition hover:text-emerald-600">Historia</a>
             <a href="#videos" className="transition hover:text-emerald-600">Videos</a>
             <a href="#galeria" className="transition hover:text-emerald-600">Galería</a>
           </div>
@@ -77,16 +78,24 @@ export default function GamesPage() {
           <div>
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-sm font-medium text-emerald-700">
               <Sparkles className="h-4 w-4" />
-              Educación + creatividad con IA
+              Aventura + drama
             </div>
 
-            <div className="mb-3 max-w-md">
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">
+            <div className="mb-4 flex flex-wrap items-center gap-2">
+              <span className="inline-flex items-center gap-2 rounded-full bg-slate-900 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-white">
+                <Gamepad2 className="h-4 w-4" />
                 Videojuego
-              </p>
+              </span>
+              <span className="rounded-full border border-slate-300 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
+                Aventura educativa · PC y móvil
+              </span>
             </div>
 
-            <div className="mb-6 max-w-md overflow-hidden rounded-[2rem] border border-emerald-100 bg-white p-4 shadow-xl shadow-blue-900/5 sm:p-5">
+            <h1 className="text-4xl font-black leading-[1.05] tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
+              Pedaleando sin parar
+            </h1>
+
+            <div className="mt-6 max-w-md overflow-hidden rounded-[2rem] border border-emerald-100 bg-white p-4 shadow-xl shadow-blue-900/5 sm:p-5">
               <Image
                 src={pedaleandoLogo}
                 alt="Logo de Pedaleando sin parar"
@@ -97,7 +106,7 @@ export default function GamesPage() {
               />
             </div>
 
-            <p className="mt-6 max-w-xl text-2xl font-extrabold leading-tight tracking-tight text-slate-900 sm:text-3xl">
+            <p className="mt-6 max-w-xl text-lg leading-relaxed text-slate-600 sm:text-xl">
               Sumérgete en la travesía del oso polar Debi por Colombia.
             </p>
 
@@ -161,6 +170,50 @@ export default function GamesPage() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="historia" className="border-t border-slate-200 bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950 text-slate-100">
+        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+          <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
+            <div>
+              <div className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 text-sm font-medium text-emerald-300">
+                <BookOpen className="h-4 w-4" />
+                El origen de todo
+              </div>
+              <h2 className="mt-5 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+                El juego está basado en esta historia. No te la pierdas.
+              </h2>
+              <p className="mt-5 text-lg leading-relaxed text-slate-300">
+                Todo empezó con un videoclip animado que narra el viaje de Debi… hasta que la historia queda en un nudo sin resolver. De ahí nació <span className="font-semibold text-white">Pedaleando sin parar</span>.
+              </p>
+              <p className="mt-4 text-lg leading-relaxed text-slate-300">
+                El videojuego continúa ese relato, revela las partes que nunca se contaron y le da un final a la aventura del oso polar.
+              </p>
+
+              <a
+                href="#videos"
+                className="mt-8 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-6 py-3.5 text-base font-semibold text-white transition hover:border-emerald-400/60 hover:text-emerald-300"
+              >
+                Sigue la historia en el juego
+                <ArrowRight className="h-4 w-4" />
+              </a>
+            </div>
+
+            <article className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 shadow-[0_35px_80px_rgba(2,6,23,0.55)]">
+              <YouTubeEmbed videoId="QVRynwNuKZ8" title="Videoclip animado: la historia de Debi" />
+              <div className="p-5 sm:p-6">
+                <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-300">
+                  <Film className="h-3.5 w-3.5" />
+                  Videoclip animado
+                </span>
+                <h3 className="mt-3 text-xl font-bold text-white">La historia de Debi</h3>
+                <p className="mt-2 text-sm leading-relaxed text-slate-300">
+                  El punto de partida del universo de Pedaleando sin parar.
+                </p>
+              </div>
+            </article>
           </div>
         </div>
       </section>
