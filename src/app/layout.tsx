@@ -8,8 +8,12 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: 'Tivisoft | IA para empresas y educación',
-  description: 'Soluciones de inteligencia artificial para empresas y aprendizaje con videojuegos.',
+  metadataBase: new URL('https://tivisoft.com'),
+  title: 'Tivisoft | Soluciones de inteligencia artificial',
+  description: 'Soluciones de inteligencia artificial para empresas y videojuegos.',
+  alternates: {
+    canonical: '/',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
