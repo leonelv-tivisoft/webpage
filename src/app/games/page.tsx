@@ -17,9 +17,9 @@ import fabrica from '@/media/galeria-pedaleando-sin-parar/8-fabrica.jpeg';
 import trabajo from '@/media/galeria-pedaleando-sin-parar/trabajo.jpeg';
 
 const gameHighlights = [
-  'Aprendizaje con narrativa y desafíos reales',
-  'Desarrollo creativo con IA para familias y estudiantes',
-  'Roadmap educativo con actividades guiadas por niveles',
+  'Una aventura narrativa que atraviesa Colombia',
+  'Explora distintos escenarios junto a Debi',
+  'Disponible para jugar en PC y móvil',
 ];
 
 const galleryItems: GalleryItem[] = [
@@ -62,7 +62,7 @@ export default function GamesPage() {
           </div>
 
           <a
-            href="https://wa.me/?text=%C2%A1Hola%20Tivisoft!%20Me%20interesa%20el%20curso%20de%20creaci%C3%B3n%20de%20videojuegos%20con%20IA%20para%20padres%20e%20hijos.%20Quisiera%20recibir%20m%C3%A1s%20informaci%C3%B3n."
+            href="https://tivisoft.itch.io/pedaleando"
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-emerald-400 to-emerald-500 px-5 py-2.5 text-sm font-semibold text-slate-950 shadow-lg shadow-emerald-500/20 transition hover:scale-[1.02]"
@@ -87,7 +87,7 @@ export default function GamesPage() {
                 Videojuego
               </span>
               <span className="rounded-full border border-slate-300 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
-                Aventura educativa · PC y móvil
+                Aventura · PC y móvil
               </span>
             </div>
 
@@ -112,7 +112,7 @@ export default function GamesPage() {
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <a
-                href="https://wa.me/?text=%C2%A1Hola%20Tivisoft!%20Me%20interesa%20el%20curso%20de%20creaci%C3%B3n%20de%20videojuegos%20con%20IA%20para%20padres%20e%20hijos.%20Quisiera%20recibir%20m%C3%A1s%20informaci%C3%B3n."
+                href="https://tivisoft.itch.io/pedaleando"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-emerald-400 to-emerald-500 px-6 py-3.5 text-base font-semibold text-slate-950 shadow-xl shadow-emerald-500/20 transition hover:scale-[1.02]"
@@ -257,7 +257,7 @@ export default function GamesPage() {
                 </span>
                 <h3 className="mt-3 text-xl font-bold text-slate-900">Gameplay en el celular</h3>
                 <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                  Controles táctiles pensados para jugar en cualquier momento, con la misma experiencia educativa.
+                  Controles táctiles pensados para jugar en cualquier momento.
                 </p>
               </div>
             </article>
@@ -284,33 +284,6 @@ export default function GamesPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
-        <div className="grid gap-10 rounded-[2.5rem] border border-slate-200 bg-white p-4 shadow-[0_25px_80px_rgba(15,23,42,0.06)] sm:p-6 lg:grid-cols-[0.95fr_1.05fr] lg:p-8">
-          <div className="min-h-[260px] rounded-[2rem] border border-slate-200 bg-slate-200 shadow-xl shadow-blue-900/10" />
-
-          <div className="flex flex-col justify-center">
-            <div className="mb-5 inline-flex max-w-max items-center rounded-full bg-emerald-100 px-3 py-1 text-sm font-semibold text-emerald-800">
-              Próximamente
-            </div>
-            <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
-              Crea la Próxima Gran Aventura. En Familia.
-            </h2>
-            <p className="mt-5 text-lg leading-relaxed text-slate-600">
-              Muy pronto abriremos las puertas de nuestro laboratorio creativo. Un espacio donde padres e hijos aprenderán a usar la Inteligencia Artificial para diseñar, programar y lanzar sus propios videojuegos.
-            </p>
-
-            <a
-              href="https://wa.me/?text=%C2%A1Hola%20Tivisoft!%20Me%20interesa%20el%20curso%20de%20creaci%C3%B3n%20de%20videojuegos%20con%20IA%20para%20padres%20e%20hijos.%20Quisiera%20recibir%20m%C3%A1s%20informaci%C3%B3n."
-              target="_blank"
-              rel="noreferrer"
-              className="mt-8 inline-flex w-fit items-center gap-3 rounded-full bg-gradient-to-r from-emerald-400 to-emerald-500 px-6 py-3.5 text-base font-semibold text-slate-950 shadow-lg shadow-emerald-500/20 transition hover:scale-[1.05]"
-            >
-              <MessageCircle className="h-5 w-5" />
-              Quiero más información
-            </a>
-          </div>
-        </div>
-      </section>
     </main>
   );
 }

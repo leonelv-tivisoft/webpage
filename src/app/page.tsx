@@ -48,7 +48,9 @@ export default function Home() {
                 </a>
 
                 <a
-                  href="#contacto"
+                  href="https://wa.me/573102134709"
+                  target="_blank"
+                  rel="noreferrer"
                   className="inline-flex items-center justify-center rounded-full border border-blue-400/60 bg-blue-500/10 px-6 py-3 font-semibold text-blue-100 transition hover:border-blue-300 hover:bg-blue-500/20"
                 >
                   Agendar Consultoría
@@ -222,7 +224,9 @@ export default function Home() {
           <p className="text-sm uppercase tracking-[0.22em] text-emerald-300">Hablemos</p>
           <h3 className="mt-4 text-3xl font-bold text-white">Diseñamos IA que encaja con tu operación.</h3>
           <a
-            href="mailto:contacto@tivisoft.com"
+            href="https://wa.me/573102134709"
+            target="_blank"
+            rel="noreferrer"
             className="mt-6 inline-flex items-center justify-center rounded-full bg-gradient-to-r from-emerald-400 to-emerald-500 px-6 py-3 font-semibold text-slate-950 shadow-glow transition hover:scale-[1.02]"
           >
             Agendar consultoría
